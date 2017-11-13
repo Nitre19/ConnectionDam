@@ -1,0 +1,4 @@
+C:\Users\Akrakorn\Source\Repos\ConnectionDam\ConnectionDam\obj\Debug\ConnectionDam.csprojResolveAssemblyReference.cache
+C:\Users\Akrakorn\Source\Repos\ConnectionDam\ConnectionDam\obj\Debug\ConnectionDam.FrmMain.resources
+C:\Users\Akrakorn\Source\Repos\ConnectionDam\ConnectionDam\obj\Debug\ConnectionDam.csproj.GenerateResource.Cache
+C:\Users\Akrakorn\Source\Repos\ConnectionDam\ConnectionDam\obj\Debug\ConnectionDam.csproj.CoreCompileInputs.cache
