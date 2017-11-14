@@ -2,3 +2,11 @@ C:\Users\Akrakorn\Source\Repos\ConnectionDam\ConnectionDam\obj\Debug\ConnectionD
 C:\Users\Akrakorn\Source\Repos\ConnectionDam\ConnectionDam\obj\Debug\ConnectionDam.FrmMain.resources
 C:\Users\Akrakorn\Source\Repos\ConnectionDam\ConnectionDam\obj\Debug\ConnectionDam.csproj.GenerateResource.Cache
 C:\Users\Akrakorn\Source\Repos\ConnectionDam\ConnectionDam\obj\Debug\ConnectionDam.csproj.CoreCompileInputs.cache
+C:\Users\marc\Desktop\ASIX2x3\Net\Practicas\ConnectionDam\ConnectionDam\bin\Debug\ConnectionDam.dll
+C:\Users\marc\Desktop\ASIX2x3\Net\Practicas\ConnectionDam\ConnectionDam\bin\Debug\ConnectionDam.pdb
+C:\Users\marc\Desktop\ASIX2x3\Net\Practicas\ConnectionDam\ConnectionDam\obj\Debug\ConnectionDam.csprojResolveAssemblyReference.cache
+C:\Users\marc\Desktop\ASIX2x3\Net\Practicas\ConnectionDam\ConnectionDam\obj\Debug\ConnectionDam.FrmMain.resources
+C:\Users\marc\Desktop\ASIX2x3\Net\Practicas\ConnectionDam\ConnectionDam\obj\Debug\ConnectionDam.csproj.GenerateResource.Cache
+C:\Users\marc\Desktop\ASIX2x3\Net\Practicas\ConnectionDam\ConnectionDam\obj\Debug\ConnectionDam.csproj.CoreCompileInputs.cache
+C:\Users\marc\Desktop\ASIX2x3\Net\Practicas\ConnectionDam\ConnectionDam\obj\Debug\ConnectionDam.dll
+C:\Users\marc\Desktop\ASIX2x3\Net\Practicas\ConnectionDam\ConnectionDam\obj\Debug\ConnectionDam.pdb
