@@ -177,33 +177,7 @@ namespace ConnectionDam
             }
             else ClErrors.reportError("Socket not connected.");
 
-        }
-
-        public Boolean connectSocketServer(String host)
-        {
-            Boolean done = false;
-
-            if (host!="")
-            {
-                try
-                {
-                    socketServer = IO.Socket(host);
-                    done = true;
-                }
-                catch (Exception e)
-                {
-                    ClErrors.reportError(e.Message);
-                }
-            }
-            else ClErrors.reportError("Can't connect socket is empty!");
-            
-            return done;
-        }
-
-        public void disconnectSocketServer()
-        {
-            socketServer.Disconnect();
-        }
+        }        
 
         private void listen()
         {
@@ -222,27 +196,5 @@ namespace ConnectionDam
                 }
             } while (!socketClientListener.Connected);            
         }
-
-        /*
-         ClSocket.connectSocketServer("");
-
-            ClSocket.socketServer.On(Socket.EVENT_CONNECT, () =>
-            {
-                Console.WriteLine("Connected to the socket");
-                var text = new { text = "Hello World Server" };
-                string json = JsonConvert.SerializeObject(text);
-                ClSocket.socketServer.Emit("helloServer", json);
-            });
-
-            ClSocket.socketServer.On("helloClient", (data) =>
-            {
-                var text = new { text = "" };
-                var t = JsonConvert.DeserializeAnonymousType((string)data, text);
-                Console.WriteLine(t.text);
-            });
-
-            Console.ReadLine();
-         */
-
     }
 }
