@@ -11,6 +11,28 @@ namespace ConnectionDam
     {
         public Quobject.SocketIoClientDotNet.Client.Socket socketServer;
 
+        public event EventHandler gameInfo;
+        public event EventHandler neighborChange;
+        public event EventHandler positionConfirmed;
+
+        private String dataGameInfo{
+            get { return dataGameInfo; }
+            set { dataGameInfo = value; }
+        }
+
+
+        private String dataNeighborChange{
+            get { return dataNeighborChange; }
+            set { dataNeighborChange = value; }
+        }
+
+        
+        private String dataPositionConfirmed{
+            get { return dataPositionConfirmed; }
+            set { dataPositionConfirmed = value; }
+        }
+
+
         public Boolean connectSocketServer(String host)
         {
             Boolean done = false;
@@ -22,20 +44,25 @@ namespace ConnectionDam
                     socketServer = IO.Socket(host);
                     done = true;
 
-
                     socketServer.On("gameInfo", (infoPartida) =>
                     {
+                        dataGameInfo = (String)infoPartida;
                         Console.WriteLine("gameInfo");
+                        gameInfo(this,EventArgs.Empty);
                     });
 
                     socketServer.On("neighborChange", (data) =>
                     {
+                        dataNeighborChange = (String) data;
                         Console.WriteLine("neighborChange");
+                        neighborChange(this,EventArgs.Empty);
                     });
 
                     socketServer.On("positionConfirmed", (data) =>
                     {
+                        dataPositionConfirmed = (String) data;
                         Console.WriteLine("positionConfirmed");
+                        positionConfirmed(this,EventArgs.Empty);
                     });            
                     
 
@@ -55,10 +82,12 @@ namespace ConnectionDam
             socketServer.Disconnect();
         }
 
-        public void selectPosition()
+        public void selectPosition(String oldList,int newPosition)
         {
-
-            socketServer.Emit("selectPosition", "datos");
+            String data;
+            //Datos en forma de Json
+            data = "";
+            socketServer.Emit("selectPosition", data);
         }
 
 
@@ -83,5 +112,30 @@ namespace ConnectionDam
             Console.ReadLine();
          */
 
+        
+
     }
+
+    class ClGameInfo
+    {
+        public List<ClClient> pcs;
+        public ClClient cliente;
+        public int pos;
+        public int wall;
+
+    }
+
+    class ClVecino
+    {
+        public ClClient cliente;
+        public String pos;        
+    }
+
+    class ClClient
+    {
+        public String nom;
+        public String IP;
+    }
+
 }
+

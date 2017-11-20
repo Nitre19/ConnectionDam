@@ -24,6 +24,8 @@ namespace ConnectionDam
 
         public delegate void delegat();
 
+        public event EventHandler msgReceived;
+
         private String data{
             get { return data; }
             set
@@ -31,10 +33,7 @@ namespace ConnectionDam
                 if (value != "")
                     data = value;
             }
-        }
-
-
-        public event EventHandler msgReceived;
+        }        
 
         public ClSocket()
         {
